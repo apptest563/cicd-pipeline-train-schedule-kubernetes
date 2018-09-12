@@ -49,6 +49,9 @@ pipeline {
                     kubeconfigId: 'kubeconfig',
                     kubeConfig: [path: ''], 
                     configs: 'train-schedule-kube.yml',
+                    secretName: '', 
+                    ssh: [sshCredentialsId: '*', sshServer: ''], 
+                    textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://'],
                     enableConfigSubstitution: true
                 )
             }
